@@ -4,7 +4,7 @@ from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
  
-import twitter_credentials
+import API_credentials
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -44,8 +44,8 @@ class TwitterClient():
 class TwitterAuthenticator():
 
     def authenticate_twitter_app(self):
-        auth = OAuthHandler(twitter_credentials.CONSUMER_KEY, twitter_credentials.CONSUMER_SECRET)
-        auth.set_access_token(twitter_credentials.ACCESS_TOKEN, twitter_credentials.ACCESS_TOKEN_SECRET)
+        auth = OAuthHandler(API_credentials.CONSUMER_KEY, API_credentials.CONSUMER_SECRET)
+        auth.set_access_token(API_credentials.ACCESS_TOKEN, API_credentials.ACCESS_TOKEN_SECRET)
         return auth
 
 # # # # TWITTER STREAMER # # # #
